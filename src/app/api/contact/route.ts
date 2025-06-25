@@ -8,15 +8,9 @@ interface ContactRequestBody {
   message: string;
 }
 
-interface ErrorResponse {
-  error: string;
-  details?: string[];
-}
 
-interface SuccessResponse {
-  success: boolean;
-  message: string;
-}
+
+
 
 interface RateLimitEntry {
   timestamps: number[];
