@@ -853,8 +853,8 @@ export default function Home() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto w-full">
           {Object.entries(techStackByCategory).map(([category, techs]) => {
-            //@ts-ignore
-            const config = categoryConfig[category];
+            type CategoryKey = keyof typeof categoryConfig;
+            const config = categoryConfig[category as CategoryKey];
             return (
               <div
                 key={category}
