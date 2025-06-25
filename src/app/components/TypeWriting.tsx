@@ -8,8 +8,10 @@ export default function TypewriterEffect() {
   const subtitleRef = useRef<HTMLDivElement>(null);
 
   const texts = ['Passionate Web Developer.', 'Dedicated Competitive Programmer.']
-  let currentIndex = 0;
-
+ const currentIndexRef = useRef(0);
+useEffect(() => {
+  currentIndexRef.current++;
+}, []);
   useEffect(() => {
     const typeText = (text: string, onComplete: () => void): void => {
       const chars: string[] = text.split('');
@@ -43,10 +45,10 @@ export default function TypewriterEffect() {
     };
 
     const animateSequence = () => {
-      typeText(texts[currentIndex], () => {
+      typeText(texts[currentIndexRef.current], () => {
         setTimeout(() => {
           eraseText(() => {
-            currentIndex = (currentIndex + 1) % texts.length;
+            currentIndexRef.current = (currentIndexRef.current + 1) % texts.length;
             setTimeout(animateSequence, 500);
           });
         }, 2000);

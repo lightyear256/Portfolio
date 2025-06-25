@@ -519,14 +519,7 @@ export default function Home() {
     message: string;
   }
 
-  interface InputChangeEvent
-    extends React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> {}
-
-  interface FormDataState {
-    name: string;
-    email: string;
-    message: string;
-  }
+ 
 
   const techStackByCategory = {
     languages: [
@@ -644,7 +637,7 @@ export default function Home() {
     {
       name: "Second-Brain",
       description:
-        "Second Brain is a web app for saving and organizing important links like YouTube videos, tweets, and more. Users can sign up and log in using JWT-based authentication. It also allows creating a shareable version of your saved links to access or share your 'brain' easily.",
+        "Second Brain is a web app for saving and organizing important links like YouTube videos, tweets, and more. Users can sign up and log in using JWT-based authentication. It also allows creating a shareable version of your saved links to access or share your &apos;brain&apos; easily.",
       hosted: false,
       githubLink: "https://github.com/lightyear256/Second-Brain-App",
     },
@@ -736,7 +729,7 @@ export default function Home() {
         </div>
         <div className="hero-description text-xl max-w-3xl">
           I build modern, responsive websites and have a strong foundation in
-          Data Structures and Algorithms. I'm always eager to explore new
+          Data Structures and Algorithms. I&apos;m always eager to explore new
           technologies and grow through hands-on learning.
         </div>
         <Link href={"https://www.linkedin.com/in/ayushmaan-kumar/"}>
@@ -755,7 +748,7 @@ export default function Home() {
         </div>
         <div className="about-content  flex flex-col gap-y-10 lg:flex-row md:gap-x-15 justify-start items-start">
           <div className="text-lg max-w-2xl text-center md:text-left">
-            Hello, my name is Ayushmaan, and I'm a student at IIIT Dharwad. I
+            Hello, my name is Ayushmaan, and I&apos;m a student at IIIT Dharwad. I
             enjoy building websites. I actively practice Data Structures and
             Algorithms and take part in competitive programming. Exploring new
             technologies and improving my skills through hands-on experience
@@ -763,10 +756,10 @@ export default function Home() {
             <div className="mt-8 space-y-6">
               <div>
                 <h3 className="text-xl font-semibold text-emerald-400 mb-3">
-                  What I'm Working On
+                  What I&apos;m Working On
                 </h3>
                 <p className="text-gray-300">
-                  Currently diving deep into full-stack development, I'm
+                  Currently diving deep into full-stack development, I&apos;m
                   passionate about creating clean, efficient code and learning
                   emerging technologies in the web development space.
                 </p>
@@ -891,9 +884,11 @@ export default function Home() {
 
                         <div className="relative flex flex-col lg:flex-row items-center gap-3 p-3 rounded-lg bg-zinc-800/30 backdrop-blur-sm border border-zinc-700/50 hover:border-zinc-600 hover:bg-zinc-800/50 transition-all duration-300 cursor-pointer group-hover/item:transform group-hover/item:scale-110 group-hover/item:shadow-lg">
                           <div className="w-8 h-8 flex-shrink-0 relative">
-                            <img
+                            <Image
                               src={tech.imgLink}
                               alt={tech.title}
+                              height={25}
+                              width={25}
                               className="tech-icon w-full h-full object-contain opacity-80 group-hover/item:opacity-100 transition-opacity duration-300"
                             />
                             <div
@@ -946,10 +941,10 @@ export default function Home() {
           <div className="lg:w-1/2 space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">
-                Let's Connect!
+                Let&apos;s Connect!
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed">
-                I'm always open to discussing new opportunities, interesting
+                I&apos;m always open to discussing new opportunities, interesting
                 projects, or just having a chat about technology and
                 development. Feel free to reach out!
               </p>
@@ -1063,7 +1058,7 @@ export default function Home() {
                   required
                   rows={6}
                   className="glow-on-hover w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all duration-300 resize-none"
-                  placeholder="Working on something cool? Let's chat!"
+                  placeholder="Working on something cool? Let&apos;s chat!"
                 />
               </div>
 
