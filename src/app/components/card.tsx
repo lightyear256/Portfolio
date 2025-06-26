@@ -14,7 +14,7 @@ type CardProps = {
 export default function Card(props:CardProps) {
   
     return (
-        <div className="max-w-md w-[340px] md:h-95  min-h-sm max-h-5xl bg-slate-800 rounded-sm p-7 flex flex-col gap-y-5">
+        <div className="max-w-md w-[320px] md:h-95  min-h-sm max-h-5xl bg-slate-800 rounded-sm p-7 flex flex-col gap-y-5">
               <div className="flex justify-between items-center ">
                 <CodeXml className="text-emerald-600 font-extrabold size-10"/>
                 <div className="flex items-center gap-x-5">

@@ -637,14 +637,14 @@ export default function Home() {
     {
       name: "Second-Brain",
       description:
-        "Second Brain is a web app for saving and organizing important links like YouTube videos, tweets, and more. Users can sign up and log in using JWT-based authentication. It also allows creating a shareable version of your saved links to access or share your &apos;brain&apos; easily.",
+        "Second Brain is a web app to save and organize important links like YouTube videos and tweets. It features JWT-based authentication and lets users create a shareable version of their saved content — their own 'brain'.",
       hosted: false,
       githubLink: "https://github.com/lightyear256/Second-Brain-App",
     },
     {
       name: "Geo-fence Attendance App",
       description:
-        "Geo-Fence Attendance App built with Expo automates attendance using location-based check-ins via Expo Location and supports biometric/face authentication for two-step verification. It features JWT-based sign up/sign in, and shows detailed attendance reports. Backend is built with Express.js.",
+        "Geo-Fence Attendance App automates check-ins using location and biometric/face verification. Built with Expo and Express.js, it features JWT auth and detailed attendance reports.",
       hosted: false,
       githubLink: "https://github.com/lightyear256/attendance-final",
     },
@@ -716,7 +716,7 @@ export default function Home() {
 
       <section
         ref={heroRef}
-        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-center md:justify-start items-start p-15 pt-32 flex-col  gap-y-5 text-left"
+        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-center md:justify-start items-start p-10 pt-32 flex-col  gap-y-5 text-left"
       >
         <div className="hero-greeting text-xl text-emerald-500">
           Hi, my name is
@@ -741,7 +741,7 @@ export default function Home() {
 
       <section
         ref={aboutRef}
-        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
+        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-10 flex-col text-left gap-y-7"
       >
         <div className="about-title text-4xl md:text-6xl font-bold text-emerald-500">
           About Me
@@ -835,7 +835,7 @@ export default function Home() {
 
       <section
         ref={techStackRef}
-        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
+        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-10 flex-col text-left gap-y-7"
       >
         <div className="tech-title">
           <div className="text-4xl md:text-6xl font-bold text-emerald-500">
@@ -917,10 +917,10 @@ export default function Home() {
 
       <section
         ref={projectsRef}
-        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
+        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-5  md:p-10 flex-col text-left gap-y-7"
       >
         <div className="projects-title text-4xl md:text-6xl font-bold text-emerald-500">Project</div>
-        <div className="flex flex-wrap gap-x-1 gap-y-1 justify-center xl:justify-start items-center">
+        <div className="flex flex-wrap mx-auto gap-x-10 gap-y-10 justify-start items-center  w-full h-full  ">
           {Project.map((value, id) => (
             <div key={id} className="project-card">
               <Card value={value} />
@@ -931,7 +931,7 @@ export default function Home() {
 
       <section
         ref={contactRef}
-        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
+        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-10 flex-col text-left gap-y-7"
       >
         <div className="contact-title text-4xl md:text-6xl font-bold text-emerald-500">
           Contact Me
@@ -1123,7 +1123,6 @@ export default function Home() {
       <footer className="bg-gradient-to-br from-slate-950 to-black border-t border-slate-800 font-mono">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Brand Section */}
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold text-emerald-400 mb-4">
                 Ayushmaan Kumar
