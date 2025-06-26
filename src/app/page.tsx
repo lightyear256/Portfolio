@@ -743,7 +743,7 @@ export default function Home() {
         ref={aboutRef}
         className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
       >
-        <div className="about-title text-5xl md:text-6xl font-bold text-emerald-500">
+        <div className="about-title text-4xl md:text-6xl font-bold text-emerald-500">
           About Me
         </div>
         <div className="about-content  flex flex-col gap-y-10 lg:flex-row md:gap-x-15 justify-start items-start">
@@ -838,7 +838,7 @@ export default function Home() {
         className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
       >
         <div className="tech-title">
-          <div className="text-5xl md:text-6xl font-bold text-emerald-500">
+          <div className="text-4xl md:text-6xl font-bold text-emerald-500">
             Tech Stack
           </div>
           <p className="text-zinc-500 text-base">Technologies I work with</p>
@@ -919,7 +919,7 @@ export default function Home() {
         ref={projectsRef}
         className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
       >
-        <div className="projects-title text-5xl md:text-6xl font-bold text-emerald-500">Project</div>
+        <div className="projects-title text-4xl md:text-6xl font-bold text-emerald-500">Project</div>
         <div className="flex flex-wrap gap-x-1 gap-y-1 justify-center xl:justify-start items-center">
           {Project.map((value, id) => (
             <div key={id} className="project-card">
@@ -933,7 +933,7 @@ export default function Home() {
         ref={contactRef}
         className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
       >
-        <div className="contact-title text-5xl md:text-6xl font-bold text-emerald-500">
+        <div className="contact-title text-4xl md:text-6xl font-bold text-emerald-500">
           Contact Me
         </div>
 
