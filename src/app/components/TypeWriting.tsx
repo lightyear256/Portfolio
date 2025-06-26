@@ -35,7 +35,6 @@ useEffect(() => {
       
       const eraseInterval = setInterval(() => {
         if (textRef.current && textRef.current.textContent && textRef.current.textContent.length > 0) {
-          // Remove one character from the end
           textRef.current.textContent = textRef.current.textContent.slice(0, -1);
         } else {
           clearInterval(eraseInterval);
@@ -84,7 +83,7 @@ useEffect(() => {
 
   return (
     <>
-      <div className="text-3xl md:text-5xl font-extrabold bg-gradient-to-bl from-pink-400 via-purple-600 to-rose-500 bg-clip-text text-transparent tracking-wider drop-shadow-lg">
+      <div className="text-2xl md:text-5xl font-extrabold bg-gradient-to-bl from-pink-400 via-purple-600 to-rose-500 bg-clip-text text-transparent tracking-wider drop-shadow-lg">
         <span ref={textRef} className="inline-block min-h-[1.2em]"></span>
         <span 
           ref={cursorRef}

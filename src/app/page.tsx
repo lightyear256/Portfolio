@@ -716,18 +716,18 @@ export default function Home() {
 
       <section
         ref={heroRef}
-        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start items-center md:items-start p-15 pt-32 flex-col  gap-y-5 text-center md:text-left"
+        className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-center md:justify-start items-start p-15 pt-32 flex-col  gap-y-5 text-left"
       >
-        <div className="hero-greeting text-2xl text-emerald-500">
+        <div className="hero-greeting text-xl text-emerald-500">
           Hi, my name is
         </div>
-        <div className="hero-name text-5xl font-extrabold md:text-7xl">
+        <div className="hero-name text-3xl  font-extrabold md:text-7xl">
           Ayushmaan Kumar.
         </div>
         <div className="hero-typewriter">
           <TypewriterEffect />
         </div>
-        <div className="hero-description text-xl max-w-3xl">
+        <div className="hero-description text-lg max-w-3xl">
           I build modern, responsive websites and have a strong foundation in
           Data Structures and Algorithms. I&apos;m always eager to explore new
           technologies and grow through hands-on learning.
@@ -747,7 +747,7 @@ export default function Home() {
           About Me
         </div>
         <div className="about-content  flex flex-col gap-y-10 lg:flex-row md:gap-x-15 justify-start items-start">
-          <div className="text-lg max-w-2xl text-center md:text-left">
+          <div className="text-lg max-w-2xl text-left">
             Hello, my name is Ayushmaan, and I&apos;m a student at IIIT Dharwad. I
             enjoy building websites. I actively practice Data Structures and
             Algorithms and take part in competitive programming. Exploring new
@@ -838,9 +838,9 @@ export default function Home() {
         className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
       >
         <div className="tech-title">
-          <h2 className="text-6xl font-bold text-emerald-500 mb-2">
+          <div className="text-5xl md:text-6xl font-bold text-emerald-500">
             Tech Stack
-          </h2>
+          </div>
           <p className="text-zinc-500 text-base">Technologies I work with</p>
         </div>
 
@@ -919,7 +919,7 @@ export default function Home() {
         ref={projectsRef}
         className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
       >
-        <div className="projects-title text-6xl text-emerald-500">Project</div>
+        <div className="projects-title text-5xl md:text-6xl font-bold text-emerald-500">Project</div>
         <div className="flex flex-wrap gap-x-1 gap-y-1 justify-center xl:justify-start items-center">
           {Project.map((value, id) => (
             <div key={id} className="project-card">
@@ -933,7 +933,7 @@ export default function Home() {
         ref={contactRef}
         className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-15 flex-col text-left gap-y-7"
       >
-        <div className="contact-title text-6xl text-emerald-500 mb-8">
+        <div className="contact-title text-5xl md:text-6xl font-bold text-emerald-500">
           Contact Me
         </div>
 
