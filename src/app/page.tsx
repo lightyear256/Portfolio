@@ -3,12 +3,7 @@ import Image from "next/image";
 import Header from "./components/Header";
 import TypewriterEffect from "./components/TypeWriting";
 import Card from "./components/card";
-import {
-  Github,
-  Mail,
-  Linkedin,
-  Heart
-} from "lucide-react";
+import { Github, Mail, Linkedin, Heart } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
@@ -236,21 +231,21 @@ export default function Home() {
         "-=0.3"
       )
       .fromTo(
-  ".hero-button",
-  {
-    opacity: 0,
-    y: 30,
-    scale: 0.9,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  "-=0.3"
-);
+        ".hero-button",
+        {
+          opacity: 0,
+          y: 30,
+          scale: 0.9,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: "back.out(1.7)",
+        },
+        "-=0.3"
+      );
 
     gsap.fromTo(
       ".about-title",
@@ -519,8 +514,6 @@ export default function Home() {
     message: string;
   }
 
- 
-
   const techStackByCategory = {
     languages: [
       {
@@ -633,6 +626,14 @@ export default function Home() {
       hosted: true,
       githubLink: "https://github.com/lightyear256/Chat-RTC",
       hostedLink: "https://chat-rtc-three.vercel.app/",
+      techStack: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "JWT (JSON Web Token)",
+        "WebSocket (native)",
+        "MongoDB",
+      ],
     },
     {
       name: "Second-Brain",
@@ -640,6 +641,13 @@ export default function Home() {
         "Second Brain is a web app to save and organize important links like YouTube videos and tweets. It features JWT-based authentication and lets users create a shareable version of their saved content — their own 'brain'.",
       hosted: false,
       githubLink: "https://github.com/lightyear256/Second-Brain-App",
+      techStack:[
+  "React.js",
+  "Node.js",
+  "Express.js",
+  "JWT (JSON Web Token)",
+  "MongoDB"
+]
     },
     {
       name: "Geo-fence Attendance App",
@@ -647,6 +655,16 @@ export default function Home() {
         "Geo-Fence Attendance App automates check-ins using location and biometric/face verification. Built with Expo and Express.js, it features JWT auth and detailed attendance reports.",
       hosted: false,
       githubLink: "https://github.com/lightyear256/attendance-final",
+      techStack:[
+  "React Native (Expo)",
+  "Express.js",
+  "Node.js",
+  "JWT (JSON Web Token)",
+  "MongoDB",
+  "Expo Location",
+  "Expo Local Authentication"
+]
+
     },
     {
       name: "Hand-Gesture Volume Controller ",
@@ -655,6 +673,13 @@ export default function Home() {
       hosted: false,
       githubLink:
         "https://github.com/lightyear256/Hand-gesture-volume-controller",
+      techStack:[
+  "Python",
+  "OpenCV",
+  "MediaPipe",
+  "PyCaw"
+]
+
     },
   ];
 
@@ -748,8 +773,8 @@ export default function Home() {
         </div>
         <div className="about-content  flex flex-col gap-y-10 lg:flex-row md:gap-x-15 justify-start items-start">
           <div className="text-lg max-w-2xl text-left">
-            Hello, my name is Ayushmaan, and I&apos;m a student at IIIT Dharwad. I
-            enjoy building websites. I actively practice Data Structures and
+            Hello, my name is Ayushmaan, and I&apos;m a student at IIIT Dharwad.
+            I enjoy building websites. I actively practice Data Structures and
             Algorithms and take part in competitive programming. Exploring new
             technologies and improving my skills through hands-on experience
             keeps me motivated.
@@ -919,8 +944,10 @@ export default function Home() {
         ref={projectsRef}
         className="bg-gradient-to-br from-[#101c2c] to-slate-950 w-full min-h-screen flex justify-start p-5  md:p-10 flex-col text-left gap-y-7"
       >
-        <div className="projects-title text-4xl md:text-6xl font-bold text-emerald-500">Project</div>
-        <div className="flex flex-wrap mx-auto gap-x-10 gap-y-10 justify-start items-center  w-full h-full  ">
+        <div className="projects-title text-4xl md:text-6xl font-bold text-emerald-500">
+          Project
+        </div>
+        <div className="flex flex-wrap mx-auto gap-x-10 gap-y-10 justify-start items-start  w-full h-full  ">
           {Project.map((value, id) => (
             <div key={id} className="project-card">
               <Card value={value} />
@@ -944,8 +971,8 @@ export default function Home() {
                 Let&apos;s Connect!
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed">
-                I&apos;m always open to discussing new opportunities, interesting
-                projects, or just having a chat about technology and
+                I&apos;m always open to discussing new opportunities,
+                interesting projects, or just having a chat about technology and
                 development. Feel free to reach out!
               </p>
             </div>
@@ -1058,7 +1085,7 @@ export default function Home() {
                   required
                   rows={6}
                   className="glow-on-hover w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all duration-300 resize-none"
-                  placeholder="Working on something cool? Let&apos;s chat!"
+                  placeholder="Working on something cool? Let's chat!"
                 />
               </div>
 
@@ -1232,7 +1259,7 @@ export default function Home() {
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <div className="text-gray-400 flex items-center gap-x-2 text-sm">
-                  <div>Made with</div> 
+                  <div>Made with</div>
                   <Heart className="text-rose-600 size-5"></Heart>
                 </div>
               </div>
