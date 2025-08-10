@@ -620,6 +620,24 @@ export default function Home() {
 
   const Project = [
     {
+  name: "PropSnap",
+  description: "A modern real estate platform with property browsing, listing, search, and management, featuring secure authentication, detailed listings, and robust data validation.",
+  hosted: true,
+  githubLink: "https://github.com/lightyear256/PropSnap",
+  hostedLink: "https://prop-snap-flame.vercel.app/",
+  techStack: [
+    "Next.js",
+    "Express.js", 
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "JWT (JSON Web Token)",
+    "Zod",
+    "Tailwind CSS",
+    "Multer"
+  ],
+},
+    {
       name: "ChatRTC",
       description:
         "A real-time chat application where users can sign up, log in, create chat rooms, and join others using room codes. Built with Express.js and JWT for authentication, and uses native WebSocket for real-time communication",
