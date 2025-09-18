@@ -619,7 +619,26 @@ export default function Home() {
   };
 
   const Project = [
+
     {
+  "name": "HomeQuest",
+  "description": "A lightweight real-estate CRM application for managing clients and deals. It provides secure authentication, client registration, deal tracking, and robust backend validation, with server-side rendering on the home page for SEO.",
+  "hosted": true,
+  "githubLink": "https://github.com/lightyear256/Home-Quest",
+  "hostedLink": "https://home-quest-azure.vercel.app/",
+  "techStack": [
+    "Next.js",
+    "Express.js",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "JWT (JSON Web Token)",
+    "Zod",
+    "Tailwind CSS",
+    "Multer"
+  ]
+}
+,{
   name: "PropSnap",
   description: "A modern real estate platform with property browsing, listing, search, and management, featuring secure authentication, detailed listings, and robust data validation.",
   hosted: true,
