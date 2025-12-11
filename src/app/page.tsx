@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import axios from "axios";
+import ClickSpark from './components/click';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -619,6 +620,25 @@ export default function Home() {
   };
 
   const Project = [
+    {
+  "name": "Forge",
+  "description": "Forge is a simple online code editor that supports writing and executing programs in C, C++, Python, JavaScript, Rust, Ruby, and Java. It runs code through a backend execution system that queues jobs using BullMQ and processes them inside isolated Docker environments. The platform provides a clean, minimal interface with syntax highlighting and fast feedback for quick code testing and learning.",
+  "hosted": true,
+  // "githubLink": "https://github.com/lightyear256/Forge",
+  "hostedLink": "https://forge.ayushmaan.tech/",
+  "techStack": [
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "BullMQ",
+    "Redis",
+    "Docker (language-specific runtimes)",
+    "Monaco Editor",
+    "Tailwind CSS"
+  ]
+},
+
 
     {
   "name": "HomeQuest",
@@ -768,6 +788,12 @@ export default function Home() {
   };
   return (
     <div className="text-white font-mono">
+      <ClickSpark sparkColor='#fff'
+  sparkSize={10}
+  sparkRadius={15}
+  sparkCount={8}
+  duration={400}
+>
       <Header
         home={heroRef}
         about={aboutRef}
@@ -1316,6 +1342,7 @@ export default function Home() {
           ></div>
         </div>
       </footer>
+      </ClickSpark>
     </div>
   );
 }

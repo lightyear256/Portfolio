@@ -5,7 +5,7 @@ type CardProps = {
   value:{
     name:string,
     description:string,
-    githubLink:string,
+    githubLink?:string,
     hosted:boolean,
     hostedLink?:string,
     techStack: Array<string>
@@ -20,7 +20,7 @@ export default function Card(props:CardProps) {
               <div className="flex justify-between items-center ">
                 <CodeXml className="text-emerald-600 font-extrabold size-10"/>
                 <div className="flex items-center gap-x-5">
-                <Link href={props.value.githubLink}><Github className="cursor-pointer"/></Link>
+                {props.value.githubLink && props.value.githubLink && (<Link href={props.value.githubLink}><Github className="cursor-pointer"/></Link>)}
                 {props.value.hosted && props.value.hostedLink && (
                   <Link href={props.value.hostedLink}>
                     <ExternalLink className="cursor-pointer"/>
