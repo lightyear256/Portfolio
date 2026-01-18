@@ -122,7 +122,26 @@ export const Project = [
   ]
 },
 
-
+{
+    name: "HealthCare+",
+    description:
+      "A healthcare support platform that allows patients to raise issues, communicate with volunteers, and get AI-powered assistance through an integrated chatbot. The chatbot is powered by Google Gemini Flash and provides empathetic, general health guidance while encouraging professional medical consultation when necessary.",
+    hosted: true,
+    githubLink:"https://github.com/lightyear256/HealthCarePlus",
+    hostedLink: "https://health-care-plus-two.vercel.app/",
+    techStack: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "PostgreSQL (NeonDB)",
+      "Prisma ORM",
+      "JWT (JSON Web Token)",
+      "Google Generative AI (Gemini Flash)",
+      "Tailwind CSS",
+    ],
+  },
     {
   "name": "HomeQuest",
   "description": "A lightweight real-estate CRM application for managing clients and deals. It provides secure authentication, client registration, deal tracking, and robust backend validation, with server-side rendering on the home page for SEO.",
