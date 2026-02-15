@@ -106,9 +106,9 @@ export const Project = [
     {
   "name": "Forge",
   "description": "Forge is a simple online code editor that supports writing and executing programs in C, C++, Python, JavaScript, Rust, Ruby, and Java. It runs code through a backend execution system that queues jobs using BullMQ and processes them inside isolated Docker environments. The platform provides a clean, minimal interface with syntax highlighting and fast feedback for quick code testing and learning.",
-  "hosted": true,
-  // "githubLink": "https://github.com/lightyear256/Forge",
-  "hostedLink": "https://forge.ayushmaan.tech/",
+  "hosted": false,
+  "githubLink": "https://github.com/lightyear256/Forge",
+  // "hostedLink": "https://forge.ayushmaan.tech/",
   "techStack": [
     "Next.js",
     "TypeScript",
