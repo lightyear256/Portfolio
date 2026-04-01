@@ -1,106 +1,142 @@
 export const techStackByCategory = {
-    languages: [
-      {
-        title: "JavaScript",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-      },
-      {
-        title: "TypeScript",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      },
-      {
-        title: "Python",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-      },
-      {
-        title: "C",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
-      },
-      {
-        title: "C++",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-      },
-      {
-        title: "Java",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-      },
-    ],
+  languages: [
+    {
+      title: "JavaScript",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    },
+    {
+      title: "TypeScript",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    },
+    {
+      title: "Python",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    },
+    {
+      title: "C",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+    },
+    {
+      title: "C++",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+    },
+    {
+      title: "Java",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    },
+  ],
 
-    frontend: [
-      {
-        title: "HTML5",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      },
-      {
-        title: "CSS3",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      },
-      {
-        title: "React",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      },
-      {
-        title: "Next.js",
-        imgLink:
-          "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/nextjs/nextjs-line-wordmark.svg",
-      },
-      {
-        title: "Tailwind",
-        imgLink:
-          "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/tailwindcss/tailwindcss-original-wordmark.svg",
-      },
-      {
-        title: "axios",
-        imgLink:
-          "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/axios/axios-plain-wordmark.svg",
-      },
-    ],
+  frontend: [
+    {
+      title: "HTML5",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    },
+    {
+      title: "CSS3",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    },
+    {
+      title: "React",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      title: "Next.js",
+      imgLink:
+        "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/nextjs/nextjs-line-wordmark.svg",
+    },
+    {
+      title: "Tailwind",
+      imgLink:
+        "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/tailwindcss/tailwindcss-original-wordmark.svg",
+    },
+    {
+      title: "axios",
+      imgLink:
+        "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/axios/axios-plain-wordmark.svg",
+    },
+  ],
 
-    backend: [
-      {
-        title: "Node.js",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      },
-      {
-        title: "Express.js",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      },
-      {
-        title: "Prisma",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
-      },
-    ],
+  backend: [
+    {
+      title: "Node.js",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    },
+    {
+      title: "Express.js",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    },
+    {
+      title: "Prisma",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+    },
+  ],
 
-    databases: [
-      {
-        title: "MongoDB",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-      },
-      {
-        title: "PostgreSQL",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-      },
-      {
-        title: "MySQL",
-        imgLink:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-      },
-    ],
-  };
+  databases: [
+    {
+      title: "MongoDB",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    },
+    {
+      title: "PostgreSQL",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    },
+    {
+      title: "MySQL",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    },
+  ],
+
+  devops: [
+    {
+      title: "Docker",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    },
+    {
+      title: "Nginx",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
+    },
+    {
+      title: "GitHub Actions",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    },
+  ],
+  cloud: [
+    {
+      title: "AWS",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    },
+    {
+      title: "GCP",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    },
+    {
+      title: "DigitalOcean",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg",
+    },
+  ],
+};
+
 
 export const Project = [
     {
@@ -108,7 +144,7 @@ export const Project = [
   "description": "Forge is a simple online code editor that supports writing and executing programs in C, C++, Python, JavaScript, Rust, Ruby, and Java. It runs code through a backend execution system that queues jobs using BullMQ and processes them inside isolated Docker environments. The platform provides a clean, minimal interface with syntax highlighting and fast feedback for quick code testing and learning.",
   "hosted": false,
   "githubLink": "https://github.com/lightyear256/Forge",
-  // "hostedLink": "https://forge.ayushmaan.tech/",
+  "hostedLink": "https://forge.ayushmaan.tech/",
   "techStack": [
     "Next.js",
     "TypeScript",
@@ -287,4 +323,18 @@ export const MyInterest = [
       glow: "shadow-orange-500/20",
       accent: "text-orange-400",
     },
+    devops: {
+    title: "DevOps & Deployment",
+    gradient: "from-gray-500/20 to-slate-500/20",
+    border: "border-gray-500/30",
+    glow: "shadow-gray-500/20",
+    accent: "text-gray-400",
+  },
+  cloud: {
+    title: "Cloud Platforms",
+    gradient: "from-sky-500/20 to-blue-500/20",
+    border: "border-sky-500/30",
+    glow: "shadow-sky-500/20",
+    accent: "text-sky-400",
+  },
   };
