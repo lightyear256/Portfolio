@@ -33,14 +33,13 @@ interface LCData {
 }
 
 function Sk({ w = "w-full", h = "h-3" }: { w?: string; h?: string }) {
-  return (
-    <div className={`${w} ${h} rounded-md bg-white/5 animate-pulse`} />
-  );
+  return <div className={`${w} ${h} rounded-md bg-white/5 animate-pulse`} />;
 }
 
 function ErrMsg({ msg }: { msg: string }) {
   return <p className="text-xs text-red-400 leading-relaxed">{msg}</p>;
 }
+
 function RateLimitMsg() {
   return (
     <div className="flex flex-col gap-1.5">
@@ -66,12 +65,14 @@ function Label({ children }: { children: string }) {
 function PBadge({ platform, user, color }: { platform: string; user: string; color: string }) {
   return (
     <div className="flex items-center gap-2 min-w-0">
-      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: color, boxShadow: `0 0 8px ${color}88` }} />
+      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+        style={{ background: color, boxShadow: `0 0 8px ${color}88` }} />
       <span className="font-extrabold text-[0.68rem] tracking-[0.18em] uppercase flex-shrink-0"
         style={{ fontFamily: "'Syne', sans-serif", color }}>
         {platform}
       </span>
-      <span className="ml-auto text-[0.62rem] font-mono truncate min-w-0" style={{ color: "var(--muted)" }}>
+      <span className="ml-auto text-[0.62rem] font-mono truncate min-w-0"
+        style={{ color: "var(--muted)" }}>
         {user}
       </span>
     </div>
@@ -146,19 +147,24 @@ function LangChart({ langs }: { langs: GHData["topLangs"] }) {
             style={{ flex: l.pct, background: l.color }} />
         ))}
       </div>
-      <div className="grid gap-x-6 gap-y-2.5" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))" }}>
+      <div className="grid gap-x-6 gap-y-2.5"
+        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))" }}>
         {langs.map((l) => (
           <div key={l.name} className="min-w-0">
             <div className="flex justify-between mb-1 gap-1.5">
-              <span className="text-[0.72rem] flex items-center gap-1.5 min-w-0 truncate" style={{ color: "var(--muted)" }}>
-                <span className="w-2 h-2 rounded-sm flex-shrink-0 inline-block" style={{ background: l.color }} />
+              <span className="text-[0.72rem] flex items-center gap-1.5 min-w-0 truncate"
+                style={{ color: "var(--muted)" }}>
+                <span className="w-2 h-2 rounded-sm flex-shrink-0 inline-block"
+                  style={{ background: l.color }} />
                 <span className="truncate">{l.name}</span>
               </span>
-              <span className="text-[0.72rem] font-semibold flex-shrink-0" style={{ color: "var(--text)" }}>
+              <span className="text-[0.72rem] font-semibold flex-shrink-0"
+                style={{ color: "var(--text)" }}>
                 {l.pct.toFixed(1)}%
               </span>
             </div>
-            <div className="h-[3px] rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
+            <div className="h-[3px] rounded-full overflow-hidden"
+              style={{ background: "rgba(255,255,255,0.06)" }}>
               <div className="h-full rounded-full transition-all duration-1000"
                 style={{ width: `${l.pct}%`, background: l.color }} />
             </div>
@@ -193,7 +199,8 @@ function LCDonut({ easy, medium, hard, solved, totalEasy, totalMedium, totalHard
     <div className="flex flex-wrap items-center gap-5 min-w-0">
       <div className="relative flex-shrink-0" style={{ width: 104, height: 104 }}>
         <svg width="104" height="104" style={{ transform: "rotate(-90deg)" }}>
-          <circle cx={cx} cy={cy} r={r} fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth={sw} />
+          <circle cx={cx} cy={cy} r={r} fill="none"
+            stroke="rgba(255,255,255,0.05)" strokeWidth={sw} />
           {arcs.map((a, i) => (
             <circle key={i} cx={cx} cy={cy} r={r} fill="none"
               stroke={a.color} strokeWidth={sw}
@@ -204,22 +211,27 @@ function LCDonut({ easy, medium, hard, solved, totalEasy, totalMedium, totalHard
           ))}
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-2xl font-extrabold leading-none" style={{ fontFamily: "'Syne',sans-serif", color: "var(--lime)" }}>
+          <span className="text-2xl font-extrabold leading-none"
+            style={{ fontFamily: "'Syne',sans-serif", color: "var(--lime)" }}>
             {solved}
           </span>
-          <span className="text-[0.48rem] tracking-[0.14em] uppercase mt-0.5" style={{ color: "var(--muted)" }}>
+          <span className="text-[0.48rem] tracking-[0.14em] uppercase mt-0.5"
+            style={{ color: "var(--muted)" }}>
             solved
           </span>
         </div>
       </div>
-
       <div className="flex-1 flex flex-col gap-2.5 min-w-0" style={{ minWidth: 110 }}>
         {arcs.map((a) => (
           <div key={a.label} className="flex items-center gap-2 min-w-0">
-            <div className="w-[7px] h-[7px] rounded-sm flex-shrink-0" style={{ background: a.color }} />
-            <span className="text-[0.72rem] flex-1 min-w-0" style={{ color: "var(--muted)" }}>{a.label}</span>
-            <span className="text-[0.78rem] font-bold flex-shrink-0" style={{ color: "var(--text)" }}>{a.val}</span>
-            <span className="text-[0.62rem] flex-shrink-0 w-9 text-left" style={{ color: "var(--muted)" }}>/{a.tot}</span>
+            <div className="w-[7px] h-[7px] rounded-sm flex-shrink-0"
+              style={{ background: a.color }} />
+            <span className="text-[0.72rem] flex-1 min-w-0"
+              style={{ color: "var(--muted)" }}>{a.label}</span>
+            <span className="text-[0.78rem] font-bold flex-shrink-0"
+              style={{ color: "var(--text)" }}>{a.val}</span>
+            <span className="text-[0.62rem] flex-shrink-0 w-9 text-left"
+              style={{ color: "var(--muted)" }}>/{a.tot}</span>
           </div>
         ))}
       </div>
@@ -230,7 +242,7 @@ function LCDonut({ easy, medium, hard, solved, totalEasy, totalMedium, totalHard
 function LCHeatmap({ calendar }: { calendar: Record<string, number> }) {
   const WEEKS = 15;
   const DAYS  = WEEKS * 7;
-  const nowSec       = Math.floor(Date.now() / 1000);
+  const nowSec        = Math.floor(Date.now() / 1000);
   const todayMidnight = nowSec - (nowSec % 86400);
 
   const cells: { count: number; label: string }[] = [];
@@ -253,44 +265,42 @@ function LCHeatmap({ calendar }: { calendar: Record<string, number> }) {
   return (
     <div className="flex flex-col items-center gap-3">
       <Label>{`submission activity · ${WEEKS} weeks`}</Label>
-
       <div className="flex gap-0 mx-auto">
         <div className="flex flex-col gap-[3px] mr-1.5 pt-px">
           {dayLabels.map((d, i) => (
-            <div key={i} className="w-2.5 h-3 flex items-center text-[0.52rem]" style={{ color: "var(--muted)" }}>
+            <div key={i} className="w-2.5 h-3 flex items-center text-[0.52rem]"
+              style={{ color: "var(--muted)" }}>
               {d}
             </div>
           ))}
         </div>
-
         <div className="flex gap-[3px]">
           {weeks.map((week, wi) => (
             <div key={wi} className="flex flex-col gap-[3px]">
               {week.map((day, di) => (
                 <div key={di} title={day.label}
-  className="flex-shrink-0 transition-colors duration-300"
-  style={{
-    width:  day.count === 0 ? '10px' : '12px',
-    height: day.count === 0 ? '10px' : '12px',
-    margin: day.count === 0 ? '1px'  : '0px',
-    borderRadius: '3px',
-    background: day.count === 0
-      ? 'rgba(255,255,255,0.04)'
-      : `rgba(245,158,11,${alpha(day.count)})`,
-  }} />
+                  className="flex-shrink-0 transition-colors duration-300"
+                  style={{
+                    width:        day.count === 0 ? "10px" : "12px",
+                    height:       day.count === 0 ? "10px" : "12px",
+                    margin:       day.count === 0 ? "1px"  : "0px",
+                    borderRadius: "3px",
+                    background:   day.count === 0
+                      ? "rgba(255,255,255,0.04)"
+                      : `rgba(245,158,11,${alpha(day.count)})`,
+                  }} />
               ))}
             </div>
           ))}
         </div>
       </div>
-
       <div className="flex items-center justify-center gap-1.5">
         <span className="text-[0.58rem]" style={{ color: "var(--muted)" }}>Less</span>
         {[0.04, 0.25, 0.45, 0.65, 0.9].map((o, i) => (
-  <div key={i} className="w-2.5 h-2.5 rounded-sm" style={{
-    background: o === 0.04 ? 'rgba(255,255,255,0.04)' : `rgba(245,158,11,${o})`
-  }} />
-))}
+          <div key={i} className="w-2.5 h-2.5 rounded-sm" style={{
+            background: o === 0.04 ? "rgba(255,255,255,0.04)" : `rgba(245,158,11,${o})`,
+          }} />
+        ))}
         <span className="text-[0.58rem]" style={{ color: "var(--muted)" }}>More</span>
       </div>
     </div>
@@ -326,15 +336,15 @@ function parseLCData(d: any): LCData {
 const CARD = "rounded-[20px] p-[22px] border border-white/[0.07] min-w-0 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(0,0,0,0.38)]";
 
 export default function StatsSection() {
-  const [gh, setGh]               = useState<GHData | null>(null);
-  const [lc, setLc]               = useState<LCData | null>(null);
-  const [ghL, setGhL]             = useState(true);
-  const [lcL, setLcL]             = useState(true);
-  const [ghErr, setGhErr]         = useState<string | null>(null);
-  const [ghRL, setGhRL]           = useState(false);
-  const [lcErr, setLcErr]         = useState<string | null>(null);
-  const [ts, setTs]               = useState<Date | null>(null);
-  const [spin, setSpin]           = useState(false);
+  const [gh, setGh]       = useState<GHData | null>(null);
+  const [lc, setLc]       = useState<LCData | null>(null);
+  const [ghL, setGhL]     = useState(true);
+  const [lcL, setLcL]     = useState(true);
+  const [ghErr, setGhErr] = useState<string | null>(null);
+  const [ghRL, setGhRL]   = useState(false);
+  const [lcErr, setLcErr] = useState<string | null>(null);
+  const [ts, setTs]       = useState<Date | null>(null);
+  const [spin, setSpin]   = useState(false);
 
   const fetchGH = useCallback(async () => {
     setGhL(true); setGhErr(null); setGhRL(false);
@@ -349,9 +359,9 @@ export default function StatsSection() {
         if (body?.message?.includes("rate limit")) { setGhRL(true); setGhL(false); return; }
       }
       if (!uRes.ok) throw new Error(`GitHub user not found (${uRes.status})`);
-      const user: any       = await uRes.json();
-      const repos: any[]    = rRes.ok ? await rRes.json() : [];
-      const events: any[]   = eRes.ok ? await eRes.json() : [];
+      const user: any    = await uRes.json();
+      const repos: any[] = rRes.ok ? await rRes.json() : [];
+      const events: any[] = eRes.ok ? await eRes.json() : [];
 
       const stars = repos.reduce((s, r) => s + (r.stargazers_count || 0), 0);
       const forks = repos.reduce((s, r) => s + (r.forks_count    || 0), 0);
@@ -368,7 +378,10 @@ export default function StatsSection() {
       const totalBytes = Object.values(langBytes).reduce((a, b) => a + b, 0) || 1;
       const topLangs = Object.entries(langBytes)
         .sort(([, a], [, b]) => b - a).slice(0, 6)
-        .map(([name, bytes]) => ({ name, pct: (bytes / totalBytes) * 100, color: LANG_COLORS[name] || "#c8f542" }));
+        .map(([name, bytes]) => ({
+          name, pct: (bytes / totalBytes) * 100,
+          color: LANG_COLORS[name] || "#c8f542",
+        }));
 
       const pushes = Array(24).fill(0);
       const now = Date.now();
@@ -378,7 +391,10 @@ export default function StatsSection() {
         if (w >= 0 && w < 24) pushes[23 - w] += (e.payload?.commits?.length || 1);
       });
 
-      const pushDays = new Set(events.filter((e) => e.type === "PushEvent").map((e) => new Date(e.created_at).toDateString()));
+      const pushDays = new Set(
+        events.filter((e) => e.type === "PushEvent")
+          .map((e) => new Date(e.created_at).toDateString())
+      );
       let streak = 0;
       for (let i = 0; i < 30; i++) {
         const d = new Date(); d.setDate(d.getDate() - i);
@@ -435,9 +451,37 @@ export default function StatsSection() {
   return (
     <>
       <style>{`
-        @keyframes sk   { from { opacity:.35 } to { opacity:.7 } }
-        @keyframes spin { to   { transform: rotate(360deg) } }
+        @keyframes spin { to { transform: rotate(360deg) } }
         .s-spin { animation: spin .7s linear }
+
+        .stats-grid-gh {
+          display: grid;
+          gap: 14px;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-areas: "overview activity" "languages languages";
+        }
+        .stats-grid-lc {
+          display: grid;
+          gap: 14px;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-areas: "problems stats" "heatmap heatmap";
+        }
+
+        @media (max-width: 640px) {
+          .stats-grid-gh {
+            grid-template-columns: 1fr;
+            grid-template-areas: "overview" "activity" "languages";
+          }
+          .stats-grid-lc {
+            grid-template-columns: 1fr;
+            grid-template-areas: "problems" "stats" "heatmap";
+          }
+          .heatmap-card {
+            max-width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
       `}</style>
 
       <div className="flex items-center justify-between mb-9 gap-3">
@@ -463,7 +507,8 @@ export default function StatsSection() {
           onMouseLeave={e => (e.currentTarget.style.background = "rgba(200,245,66,0.07)")}
         >
           <svg className={spin ? "s-spin" : ""} width="13" height="13" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            fill="none" stroke="currentColor" strokeWidth="2.5"
+            strokeLinecap="round" strokeLinejoin="round">
             <path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 12a9 9 0 0 1-15 6.7L3 16" />
             <polyline points="21 8 21 3 16 3" /><polyline points="3 16 3 21 8 21" />
           </svg>
@@ -473,12 +518,7 @@ export default function StatsSection() {
 
       <SectionDivider title="GitHub" handle={GH} color="var(--lime)" icon={GhIcon} />
 
-      <div className="grid gap-3.5 mb-10"
-        style={{
-          gridTemplateColumns: "repeat(2, minmax(0,1fr))",
-          gridTemplateAreas: `"overview  activity" "languages languages"`,
-        }}>
-
+      <div className="stats-grid-gh mb-10">
         <div className={CARD} style={{ gridArea: "overview", background: "var(--navy)" }}>
           <PBadge platform="Overview" user={GH} color="var(--lime)" />
           <div className="mt-4">
@@ -508,7 +548,7 @@ export default function StatsSection() {
         <div className={CARD} style={{ gridArea: "languages", background: "var(--navy)" }}>
           <PBadge platform="Languages" user={GH} color="var(--lime)" />
           <div className="mt-4">
-            {ghL  ? <div className="flex flex-col gap-2.5"><Sk h="h-1.5" />{Array(4).fill(0).map((_, i) => <Sk key={i} h="h-4" w={`w-[${70 - i * 12}%]`} />)}</div>
+            {ghL  ? <div className="flex flex-col gap-2.5"><Sk h="h-1.5" />{Array(4).fill(0).map((_, i) => <Sk key={i} h="h-4" />)}</div>
             : ghRL ? <RateLimitMsg />
             : ghErr ? <ErrMsg msg={ghErr} />
             : gh && <LangChart langs={gh.topLangs} />}
@@ -516,16 +556,12 @@ export default function StatsSection() {
         </div>
       </div>
 
-      <div className="h-px mb-9" style={{ background: "linear-gradient(to right,transparent,rgba(255,255,255,0.06),transparent)" }} />
+      <div className="h-px mb-9"
+        style={{ background: "linear-gradient(to right,transparent,rgba(255,255,255,0.06),transparent)" }} />
 
       <SectionDivider title="LeetCode" handle={LC} color="#f59e0b" icon={LcIcon} />
 
-      <div className="grid gap-3.5"
-  style={{
-    gridTemplateColumns: "repeat(2, minmax(0,1fr))",
-    gridTemplateAreas: `"problems stats" "heatmap  heatmap"`,
-  }}>
-
+      <div className="stats-grid-lc">
         <div className={CARD} style={{ gridArea: "problems", background: "var(--navy)" }}>
           <PBadge platform="Problems" user={LC} color="#f59e0b" />
           <div className="mt-4">
@@ -549,15 +585,25 @@ export default function StatsSection() {
             {lcL ? <div className="flex flex-col gap-2.5">{Array(4).fill(0).map((_, i) => <Sk key={i} h="h-5" />)}</div>
             : lcErr ? <ErrMsg msg={lcErr} />
             : lc && <>
-                <StatRow label="Global rank"      value={lc.ranking > 0 ? `#${lc.ranking.toLocaleString()}` : "—"} />
-                <StatRow label="Acceptance rate"  value={lc.acceptanceRate > 0 ? `${lc.acceptanceRate.toFixed(2)}%` : "—"} accent />
-                <StatRow label="Total solved"     value={lc.solved} />
+                <StatRow label="Global rank"     value={lc.ranking > 0 ? `#${lc.ranking.toLocaleString()}` : "—"} />
+                <StatRow label="Acceptance rate" value={lc.acceptanceRate > 0 ? `${lc.acceptanceRate.toFixed(2)}%` : "—"} accent />
+                <StatRow label="Total solved"    value={lc.solved} />
                 <StatRow label="Contribution pts" value={lc.contributionPoint > 0 ? lc.contributionPoint.toLocaleString() : "—"} accent />
               </>}
           </div>
         </div>
 
-       <div className={CARD + " flex flex-col items-center"} style={{ gridArea: "heatmap", background: "var(--navy)", alignSelf: "start", maxWidth: "fit-content", marginLeft: "auto", marginRight: "auto" }}>
+        <div
+          className={CARD + " heatmap-card flex flex-col items-center"}
+          style={{
+            gridArea: "heatmap",
+            background: "var(--navy)",
+            alignSelf: "start",
+            maxWidth: "fit-content",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
           <div className="w-full">
             <PBadge platform="Heatmap" user={LC} color="#f59e0b" />
           </div>
@@ -567,16 +613,7 @@ export default function StatsSection() {
             : lc && <LCHeatmap calendar={lc.calendar} />}
           </div>
         </div>
-
       </div>
-
-      <style>{`
-        @media (max-width: 540px) {
-          .stats-grid-gh, .stats-grid-lc { grid-template-columns: 1fr !important; }
-          .stats-grid-gh { grid-template-areas: "overview" "activity" "languages" !important; }
-          .stats-grid-lc { grid-template-areas: "problems" "stats" "heatmap" !important; }
-        }
-      `}</style>
     </>
   );
 }
