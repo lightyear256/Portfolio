@@ -113,7 +113,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // Hero entrance
     const tl = gsap.timeline();
     tl.from(".hero-eyebrow", { opacity: 0, y: 20, duration: 0.6, ease: "power3.out" })
       .from(".hero-name-line1", { opacity: 0, x: -60, duration: 0.9, ease: "power3.out" }, "-=0.2")
@@ -123,7 +122,6 @@ export default function Home() {
       .from(".hero-cta", { opacity: 0, y: 20, scale: 0.95, duration: 0.6, ease: "back.out(1.7)" }, "-=0.3")
       .from(".hero-scroll-hint", { opacity: 0, duration: 0.5 }, "-=0.1");
 
-    // Section animations
     const sections = [".about-title", ".tech-title", ".projects-title", ".contact-title"];
     sections.forEach(sel => {
       gsap.fromTo(sel, { opacity: 0, y: 40 }, {
@@ -178,10 +176,8 @@ export default function Home() {
       scrollTrigger: { trigger: ".contact-form", start: "top 85%", toggleActions: "play none none reverse" }
     });
 
-    // Floating scroll hint
     gsap.to(".hero-scroll-hint", { y: 8, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: -1 });
 
-    // Subtle parallax on hero background blobs
     gsap.to(".blob-1", { y: -30, x: 20, duration: 8, ease: "sine.inOut", yoyo: true, repeat: -1 });
     gsap.to(".blob-2", { y: 20, x: -15, duration: 10, ease: "sine.inOut", yoyo: true, repeat: -1 });
     gsap.to(".blob-3", { y: -15, x: 25, duration: 7, ease: "sine.inOut", yoyo: true, repeat: -1 });
@@ -215,7 +211,6 @@ export default function Home() {
 
         .syne { font-family: 'Syne', sans-serif; }
 
-        /* Gradient noise overlay */
         .noise::before {
           content: '';
           position: absolute;
