@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { label } from "motion/react-client";
 
 interface SectionRef {
   current: HTMLElement | null;

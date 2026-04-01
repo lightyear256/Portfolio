@@ -27,7 +27,6 @@
 
         ctx.clearRect(0, 0, W, H);
 
-        const analyser = analyserRef.current;
 
         if (playing) {
   tickRef.current += 0.05;
